@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Navbar />
         <div className="h-20 md:h-24" />
         {children}
+        <Footer />
       </body>
     </html>
   );

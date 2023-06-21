@@ -63,7 +63,7 @@ export const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 top-0 z-30 flex h-20 items-center justify-between bg-[#f5f5f5] bg-opacity-50 p-3 backdrop-blur-lg backdrop-filter md:h-24">
       <img
-        src="/images/logo.webp"
+        src="https://static.wixstatic.com/media/c5e733_c538c9de96fd47bcbc1f8a1fac6e1d8f~mv2.png/v1/crop/x_0,y_0,w_2827,h_1142/fill/w_463,h_187,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/image%20(12).png"
         alt="logo"
         className=" h-16 opacity-100 md:h-20"
       />
@@ -98,7 +98,7 @@ export const Navbar = () => {
             }}
             className=" items-center rounded-full border-4 border-solid border-transparent bg-transparent  p-3 text-center text-black hover:border-black hover:bg-black hover:text-white"
           >
-            Rólunk
+            Webshop
           </button>
           <button
             aria-label="Vizsgálataink"
@@ -107,7 +107,7 @@ export const Navbar = () => {
             }}
             className=" items-center rounded-full border-4 border-solid border-transparent bg-transparent  p-3 text-center text-black hover:border-black hover:bg-black hover:text-white"
           >
-            Vizsgálataink
+            Kosár
           </button>
 
           {/* {openLang ? "open" : "closed"} */}
@@ -143,7 +143,9 @@ export const Navbar = () => {
             }}
             className="flex w-2/3 rounded-full bg-white text-center hover:bg-black hover:underline"
           >
-            <span className="rounded-full bg-[#1f1f1f] text-white">Rólunk</span>
+            <span className="rounded-full bg-[#1f1f1f] text-white">
+              Webshop
+            </span>
           </button>
           <button
             aria-label="Vizsgálataink"
@@ -152,9 +154,7 @@ export const Navbar = () => {
             }}
             className="flex w-2/3 rounded-full bg-white text-center hover:bg-black hover:underline"
           >
-            <span className="rounded-full bg-[#1f1f1f] text-white">
-              Vizsgálataink
-            </span>
+            <span className="rounded-full bg-[#1f1f1f] text-white">Kosár</span>
           </button>
         </div>
       </div>

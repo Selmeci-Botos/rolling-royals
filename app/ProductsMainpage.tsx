@@ -1,3 +1,3 @@
 export const ProductsMainpage = () => {
-  return <div>products</div>;
+  return <div className="h-96">products</div>;
 };
