@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'react-awesome-slider/dist/styles.css';
 
 * {
   border: 1px red solid;
@@ -17,23 +16,9 @@
 }
 
 
-
-summary {
-  background-color: rgb(245, 245, 245);
-  color: white;
-}
-
 html {
   scroll-behavior: smooth;
 }
-
-.gridd {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 10px;
-}
-
 
 
 .testimonial {
@@ -91,20 +76,6 @@ button {
  transition: all .3s;
 }
 
-.menuu {
-  text-decoration: none;
-  user-select: none;
-  background-color: transparent;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: all .3s;
-  align-items: center;
-  padding: 0;
-  min-width: fit-content;
-
-}
 
 button:hover {
   color: white;
@@ -138,31 +109,3 @@ button:active {
  transform: scale(0.9);
 }
 
-.card {
-  /* width: 66vw; */
-  border-radius: 30px;
-  background-color: whitesmoke;
-  /* box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff; */
-  /* background: #121212; */
-  /* padding: 20px; */
-  margin: 10px;
- transition: 0.2s ease-in-out;
-  /* box-shadow: 15px 15px 30px var(--secondary); */
-             /* -15px -15px 30px var(--secondary);  */
-   /* box-shadow: 5px 5px 30px #00DDEB */
-  border: 3px solid black;
-  -webkit-box-shadow: 10px 10px 22px -7px rgba(0,0,0,1);
--moz-box-shadow: 10px 10px 22px -7px rgba(0,0,0,1);
-box-shadow: 10px 10px 22px -7px rgba(0,0,0,1);
-}
-
-.card:hover {
-  border: 3px solid var(--secondary);
-  /* transform: scale(1.05); */
-}
-
-
-img {
-  opacity: 65%;
-}
