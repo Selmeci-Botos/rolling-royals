@@ -33,22 +33,22 @@ export const ProductsMainpage = () => {
   ];
 
   return (
-    <div className="h-96 p-3 pr-0 pl-20 flex overflow-y-hidden overflow-x-scroll">
+    <div className="h-96 p-3 pr-0 md:pl-20 pl-5 flex overflow-y-hidden overflow-x-scroll">
       {prods.map((prod, index) => (
         <div
-          className="bg-[#1f1f1f] text-white w-1/2 mx-3 rounded-lg"
+          className="bg-[#1f1f1f] text-white w-60 mx-3 rounded-lg"
           key={index}
         >
           <img
             src={prod.img}
             alt={prod.name}
-            className="h-40 rounded-t-lg object-cover w-full"
+            className="h-40 rounded-t-lg object-cover w-60"
           />
-          <div className="flex flex-col justify-evenly h-44">
+          <div className="flex flex-col w-60 justify-evenly h-44">
             <p>{prod.name}</p>
             <p>{prod.price}</p>
             <a className="self-center mx-3" href={prod.name}>
-              <button className="">
+              <button aria-label="shop" className="">
                 <span>Shop</span>
               </button>
             </a>

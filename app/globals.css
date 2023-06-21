@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   border: 1px red solid;
-}
+} */
 * {
   --primary: #3F7CAC;
   /* --primary: #053387;  */

@@ -70,13 +70,13 @@ export const Navbar = () => {
       <button
         id="nav-toggle"
         aria-label="menu"
-        className="menuu block h-12 w-auto items-center hover:text-black lg:hidden"
+        className="bg-transparent m-0 w-12 block h-12 items-center hover:text-black lg:hidden"
         onClick={togglePanel}
       >
         {isOpen ? (
-          <GrClose className="h-full w-auto p-1 hover:text-black" />
+          <GrClose className="h-full w-auto bg-transparent hover:text-black" />
         ) : (
-          <AiOutlineMenu className="h-full w-auto hover:text-black" />
+          <AiOutlineMenu className="h-full w-auto bg-transparent  hover:text-black" />
         )}
         {/*  */}
       </button>
