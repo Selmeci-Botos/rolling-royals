@@ -1,27 +1,11 @@
-import { useRouter } from "next/navigation";
+"use client";
 
-const Search = () => {
-  const router = useRouter();
+import { useRouter, useSearchParams } from "next/navigation";
 
-  const handleSearch = (event: any) => {
-    event.preventDefault();
-    const query = event.target.searchQuery.value;
-    router.push(`/search/${query}`);
-  };
+export default function Page() {
+  const searchParams = useSearchParams();
 
-  return (
-    <div>
-      <h1>Search</h1>
-      <form onSubmit={handleSearch}>
-        <input
-          type="text"
-          name="searchQuery"
-          placeholder="Enter your search query"
-        />
-        <button type="submit">Search</button>
-      </form>
-    </div>
-  );
-};
+  const search = searchParams.get("1");
 
-export default Search;
+  return <div>Slug: {search}</div>;
+}

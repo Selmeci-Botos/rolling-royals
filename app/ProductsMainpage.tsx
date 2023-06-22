@@ -47,7 +47,10 @@ export const ProductsMainpage = () => {
           <div className="flex flex-col w-60 justify-evenly h-44">
             <p>{prod.name}</p>
             <p>{prod.price}</p>
-            <a className="self-center mx-3" href={prod.name}>
+            <a
+              className="self-center mx-3"
+              href={"/biciklik?name=" + prod.name}
+            >
               <button aria-label="shop" className="">
                 <span>Shop</span>
               </button>
