@@ -1,3 +1,15 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { db } from "./page";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  onSnapshot,
+} from "firebase/firestore";
+
 export const ProductsMainpage = () => {
   const prods = [
     {
@@ -31,10 +43,22 @@ export const ProductsMainpage = () => {
       price: "32 490 Ft",
     },
   ];
+  const [documents, setDocuments] = useState<any[]>([]);
+
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, "bicycles"), (snapshot) => {
+      const updatedDocuments = snapshot.docs.map((doc) => doc.data());
+      setDocuments(updatedDocuments);
+    });
+
+    return () => {
+      unsubscribe(); // Unsubscribe from the snapshot listener when component unmounts
+    };
+  }, []);
 
   return (
     <div className="h-96 p-3 pr-0 md:pl-20 pl-5 flex overflow-y-hidden overflow-x-scroll">
-      {prods.map((prod, index) => (
+      {documents.map((prod, index) => (
         <div
           className="bg-[#1f1f1f] text-white w-60 mx-3 rounded-lg"
           key={index}
